@@ -19,7 +19,7 @@ pipeline {
   }
   post {
     always {
-        emailext body: 'Current Build Failed. Please Review It.', recipientProviders: [[$class: 'DevelopersRecipientProvider'], 'vigneshsubramani28@gmail.com', 'dondom828@gmail.com'], subject: 'Build Failed'
+        emailext body: 'Current Build Failed. Please Review It.', recipientProviders: [[$class: 'DevelopersRecipientProvider'], ['vigneshsubramani28@gmail.com'], ['dondom828@gmail.com']], subject: 'Build Failed'
     }
   }
 }
